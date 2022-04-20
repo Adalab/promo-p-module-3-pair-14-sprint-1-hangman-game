@@ -1,10 +1,5 @@
 import '../styles/App.scss';
-{
-  /*import '../fonts/KgTenThousandReasons-R1ll.ttf';*/
-}
-{
-  /*import backgroundImg from '../images/blackboard.jpg';*/
-}
+
 function App() {
   return (
     <div className='page'>
