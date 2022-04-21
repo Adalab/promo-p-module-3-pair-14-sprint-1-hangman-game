@@ -3,6 +3,15 @@ import { useState } from 'react';
 
 function App() {
   const [numberOfErrors, setNumberOfErrors] = useState(0);
+  const [lastLetter, setLastLetter] = useState('');
+
+  const handleInput = (ev) => {
+    setLastLetter(ev.currentTarget.value);
+    let regex = new RegExp('^[ñíóáéú a-zA-Z ]+$');
+    if (lastLetter === regex) {
+      return setLastLetter;
+    }
+  };
 
   const handleClick = (ev) => {
     setNumberOfErrors(numberOfErrors + 1);
@@ -51,6 +60,8 @@ function App() {
               type='text'
               name='last-letter'
               id='last-letter'
+              value={lastLetter}
+              onChange={handleInput}
             />
           </form>
         </section>
