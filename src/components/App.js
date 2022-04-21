@@ -1,13 +1,12 @@
 import '../styles/App.scss';
-import {useState} from 'react';
+import { useState } from 'react';
 
 function App() {
+  const [numberOfErrors, setNumberOfErrors] = useState(0);
 
-let [numberOfErrors, setNumberOfErrors] = useState(0);
-
-const handleClick = (ev) => {
-  setNumberOfErrors(numberOfErrors + 1);
-}
+  const handleClick = (ev) => {
+    setNumberOfErrors(numberOfErrors + 1);
+  };
 
   return (
     <div className='page'>
@@ -70,8 +69,8 @@ const handleClick = (ev) => {
           <span className='error-2 line'></span>
           <span className='error-1 line'></span>
         </section>
-      <button onClick={handleClick}>Incrementar</button>
       </main>
+      <button onClick={handleClick}>Incrementar</button>
     </div>
   );
 }
